@@ -183,7 +183,7 @@ filters.forEach((btn) => btn.addEventListener("click", () => {
 
 // Botones "Pedir" del catálogo -> WhatsApp con el producto
 document.querySelectorAll("[data-wa]").forEach((a) => {
-  a.href = waLink(`Hola Malú, me interesa: ${a.dataset.wa}. ¿Me dais presupuesto?`);
+  a.href = waLink(`Hola Malu, me interesa: ${a.dataset.wa}. ¿Me dais presupuesto?`);
   a.target = "_blank";
   a.rel = "noopener";
 });
@@ -201,7 +201,7 @@ form.addEventListener("submit", (e) => {
     return;
   }
   note.textContent = "";
-  window.open(waLink(`Hola Malú, soy ${nombre}.\nServicio: ${data.get("servicio")}\n${mensaje}`), "_blank", "noopener");
+  window.open(waLink(`Hola Malu, soy ${nombre}.\nServicio: ${data.get("servicio")}\n${mensaje}`), "_blank", "noopener");
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();

@@ -464,7 +464,7 @@ h1.eyebrow { margin: 0; font-family: var(--body); line-height: 1.4; letter-spaci
 /* Sección azul: texto gigante de fondo en movimiento */
 .section--accent { position: relative; overflow: hidden; }
 .section--accent::after {
-  content: "MALÚ · MALÚ · MALÚ · MALÚ · MALÚ · MALÚ · MALÚ · MALÚ ·"; position: absolute; left: 0; bottom: -0.18em; white-space: nowrap;
+  content: "MALU · MALU · MALU · MALU · MALU · MALU · MALU · MALU ·"; position: absolute; left: 0; bottom: -0.18em; white-space: nowrap;
   font: 800 clamp(6rem, 18vw, 16rem)/1 var(--display); color: rgba(255,255,255,.07); pointer-events: none;
   animation: marquee 60s linear infinite;
 }
@@ -504,3 +504,9 @@ h1.eyebrow { margin: 0; font-family: var(--body); line-height: 1.4; letter-spaci
 
 .btn--block { width: 100%; }
 .product__foot { padding-top: 18px; }
+
+/* Servicio destacado a dos columnas (rotulación) */
+.service--wide { grid-column: 1 / -1; grid-template-columns: 34% 1fr; }
+.service--wide .service__body { padding: 36px 40px; }
+.service--wide h3 { font-size: 2rem; }
+@media (max-width: 640px) { .service--wide { grid-template-columns: 1fr; } .service--wide .service__body { padding: 24px 20px; } .service--wide h3 { font-size: 1.65rem; } }
