@@ -510,3 +510,8 @@ h1.eyebrow { margin: 0; font-family: var(--body); line-height: 1.4; letter-spaci
 .service--wide .service__body { padding: 36px 40px; }
 .service--wide h3 { font-size: 2rem; }
 @media (max-width: 640px) { .service--wide { grid-template-columns: 1fr; } .service--wide .service__body { padding: 24px 20px; } .service--wide h3 { font-size: 1.65rem; } }
+
+/* Crédito del diseñador */
+.footer__copy { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+.footer__credit a { color: var(--paper); font-weight: 700; background: linear-gradient(var(--accent), var(--accent)) 0 100% / 0 2px no-repeat; transition: background-size .4s var(--ease), color .3s; }
+.footer__credit a:hover { color: #8ea0ff; background-size: 100% 2px; }
