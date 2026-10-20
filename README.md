@@ -10,7 +10,6 @@ HTML + CSS + JS vanilla. Sin dependencias. Fuentes Outfit / DM Sans (Google Font
 
 ## Pendiente de confirmar con la clienta
 - [ ] Email personalizado de Malú (añadir en contacto y schema)
-- [ ] Precios reales "Desde X €" del catálogo (ahora provisionales)
 - [ ] Fotos reales de trabajos (ahora fotos libres de Unsplash)
 - [ ] Datos del titular en páginas legales: nombre/razón social, NIF y email (marcados en amarillo)
 - [ ] Dominio definitivo (actualizar canonical, og:url, sitemap, robots)
