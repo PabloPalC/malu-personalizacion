@@ -9,11 +9,11 @@ Impresión 3D, camisetas personalizadas, ropa laboral, regalos publicitarios y r
 HTML + CSS + JS vanilla. Sin dependencias. Fuentes Outfit / DM Sans (Google Fonts).
 
 ## Pendiente de confirmar con la clienta
-- [ ] Email personalizado de Malu (añadir en contacto y schema)
+- [x] Email: contacto@maluimpresiones.com
 - [x] Sección Trabajos con fotos reales (rotulación, lonas, ropa laboral)
 - [ ] Fotos reales de impresión 3D, camisetas y regalos (siguen de Unsplash)
 - [ ] Horario de apertura (para Google y la ficha de negocio)
-- [ ] Datos del titular en páginas legales: nombre/razón social, NIF y email (marcados en amarillo)
+- [ ] Datos del titular en páginas legales: nombre/razón social y NIF (marcados en amarillo)
 - [ ] Dominio definitivo (actualizar canonical, og:url, sitemap, robots)
 
 ## Créditos
