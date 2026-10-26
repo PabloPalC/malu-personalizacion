@@ -86,7 +86,7 @@ document.querySelectorAll(".section h2").forEach((h) => {
 });
 
 // Grupos que aparecen en cascada
-document.querySelectorAll(".services, .catalog, .steps, .why__grid, .faq__list").forEach((group) => {
+document.querySelectorAll(".services, .catalog, .works, .steps, .why__grid, .faq__list").forEach((group) => {
   group.classList.add("stagger");
   [...group.children].forEach((child, i) => {
     child.classList.remove("reveal");
@@ -105,7 +105,7 @@ document.querySelectorAll(".reveal, .split, .stagger, .step").forEach((el) => io
 
 // Tarjetas con inclinación 3D (solo con ratón)
 if (finePointer && !reduced) {
-  document.querySelectorAll(".service, .product").forEach((card) => {
+  document.querySelectorAll(".service, .product, .work").forEach((card) => {
     card.classList.add("tilt");
     card.addEventListener("mousemove", (e) => {
       const r = card.getBoundingClientRect();
@@ -159,7 +159,7 @@ if (finePointer && !reduced) {
 }
 
 // Filtros del catálogo con animación
-const filters = document.querySelectorAll(".filter");
+const filters = document.querySelectorAll("#catalogo .filter");
 const products = document.querySelectorAll(".product");
 filters.forEach((btn) => btn.addEventListener("click", () => {
   const cat = btn.dataset.filter;
@@ -202,6 +202,106 @@ form.addEventListener("submit", (e) => {
   }
   note.textContent = "";
   window.open(waLink(`Hola Malu, soy ${nombre}.\nServicio: ${data.get("servicio")}\n${mensaje}`), "_blank", "noopener");
+});
+
+// Trabajos: filtro por tipo y botón "Ver todos"
+const works = [...document.querySelectorAll(".work")];
+const workFilters = document.querySelectorAll("[data-work]");
+const worksMore = document.getElementById("worksMore");
+const worksGrid = document.getElementById("works");
+
+const showWorks = (type, expanded) => {
+  let n = 0;
+  works.forEach((w) => {
+    const match = type === "todo" || w.dataset.type === type;
+    const show = match && (expanded || type !== "todo" || !w.hasAttribute("data-extra"));
+    w.classList.toggle("is-hidden", !show);
+    w.classList.remove("entering");
+    if (show) {
+      w.style.setProperty("--s", n++ % 4);
+      void w.offsetWidth;
+      w.classList.add("entering");
+    }
+  });
+  worksMore.parentElement.hidden = expanded || type !== "todo";
+  worksMore.setAttribute("aria-expanded", String(expanded));
+};
+showWorks("todo", false);
+
+workFilters.forEach((btn) => btn.addEventListener("click", () => {
+  workFilters.forEach((b) => {
+    const active = b === btn;
+    b.classList.toggle("is-active", active);
+    b.setAttribute("aria-selected", String(active));
+  });
+  showWorks(btn.dataset.work, false);
+}));
+worksMore.addEventListener("click", () => showWorks("todo", true));
+
+// Visor de fotos: las imágenes grandes solo se descargan al abrir un trabajo
+const lb = document.getElementById("lightbox");
+const lbImg = document.getElementById("lbImg");
+const lbTitle = document.getElementById("lbTitle");
+const lbCount = document.getElementById("lbCount");
+const lbPrev = document.getElementById("lbPrev");
+const lbNext = document.getElementById("lbNext");
+let lbPhotos = [];
+let lbIndex = 0;
+let lbOpener = null;
+
+const lbShow = (i) => {
+  lbIndex = (i + lbPhotos.length) % lbPhotos.length;
+  const p = lbPhotos[lbIndex];
+  lbImg.classList.add("loading");
+  lbImg.onload = () => lbImg.classList.remove("loading");
+  lbImg.src = p.src;
+  lbImg.alt = p.alt;
+  lbCount.textContent = lbPhotos.length > 1 ? `${lbIndex + 1} / ${lbPhotos.length}` : "";
+  const many = lbPhotos.length > 1;
+  lbPrev.hidden = !many;
+  lbNext.hidden = !many;
+  // precarga la siguiente
+  if (many) new Image().src = lbPhotos[(lbIndex + 1) % lbPhotos.length].src;
+};
+const lbOpen = (work, opener) => {
+  lbPhotos = JSON.parse(work.dataset.photos);
+  lbTitle.textContent = work.dataset.title;
+  lbOpener = opener;
+  lb.hidden = false;
+  document.body.style.overflow = "hidden";
+  requestAnimationFrame(() => lb.classList.add("open"));
+  lbShow(0);
+  document.getElementById("lbClose").focus();
+};
+const lbClose = () => {
+  lb.classList.remove("open");
+  document.body.style.overflow = "";
+  setTimeout(() => { lb.hidden = true; lbImg.removeAttribute("src"); }, 300);
+  if (lbOpener) lbOpener.focus();
+};
+
+works.forEach((w) => {
+  const link = w.querySelector(".work__open");
+  link.addEventListener("click", (e) => { e.preventDefault(); lbOpen(w, link); });
+});
+document.getElementById("lbClose").addEventListener("click", lbClose);
+lbPrev.addEventListener("click", () => lbShow(lbIndex - 1));
+lbNext.addEventListener("click", () => lbShow(lbIndex + 1));
+lb.addEventListener("click", (e) => { if (e.target === lb) lbClose(); });
+document.addEventListener("keydown", (e) => {
+  if (lb.hidden) return;
+  if (e.key === "Escape") lbClose();
+  if (e.key === "ArrowLeft") lbShow(lbIndex - 1);
+  if (e.key === "ArrowRight") lbShow(lbIndex + 1);
+});
+// Deslizar con el dedo en móvil
+let touchX = null;
+lb.addEventListener("touchstart", (e) => { touchX = e.touches[0].clientX; }, { passive: true });
+lb.addEventListener("touchend", (e) => {
+  if (touchX === null || lbPhotos.length < 2) return;
+  const dx = e.changedTouches[0].clientX - touchX;
+  if (Math.abs(dx) > 45) lbShow(lbIndex + (dx < 0 ? 1 : -1));
+  touchX = null;
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();

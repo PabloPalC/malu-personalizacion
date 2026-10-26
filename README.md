@@ -10,7 +10,9 @@ HTML + CSS + JS vanilla. Sin dependencias. Fuentes Outfit / DM Sans (Google Font
 
 ## Pendiente de confirmar con la clienta
 - [ ] Email personalizado de Malu (añadir en contacto y schema)
-- [ ] Fotos reales de trabajos (ahora fotos libres de Unsplash)
+- [x] Sección Trabajos con fotos reales (rotulación, lonas, ropa laboral)
+- [ ] Fotos reales de impresión 3D, camisetas y regalos (siguen de Unsplash)
+- [ ] Horario de apertura (para Google y la ficha de negocio)
 - [ ] Datos del titular en páginas legales: nombre/razón social, NIF y email (marcados en amarillo)
 - [ ] Dominio definitivo (actualizar canonical, og:url, sitemap, robots)
 

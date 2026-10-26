@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://pablopalc.github.io/malu-personalizacion/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <priority>1.0</priority>
+    <image:image><image:loc>https://pablopalc.github.io/malu-personalizacion/assets/trabajos/rotulacion-furgoneta-vicar-fontaneria-cartagena-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pablopalc.github.io/malu-personalizacion/assets/trabajos/rotulacion-furgoneta-vicar-fontaneria-cartagena-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pablopalc.github.io/malu-personalizacion/assets/trabajos/rotulacion-furgoneta-vicar-fontaneria-cartagena-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pablopalc.github.io/malu-personalizacion/assets/trabajos/rotulacion-autobus-deportiva-minera-llano-del-beal-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pablopalc.github.io/malu-personalizacion/assets/trabajos/rotulacion-autobus-deportiva-minera-llano-del-beal-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pablopalc.github.io/malu-personalizacion/assets/trabajos/rotulacion-autobus-deportiva-minera-llano-del-beal-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pablopalc.github.io/malu-personalizacion/assets/trabajos/rotulacion-coche-autoescuela-sobre-ruedas-cartagena.webp</image:loc></image:image>
+    <image:image><image:loc>https://pablopalc.github.io/malu-personalizacion/assets/trabajos/rotulacion-fachada-floristeria-paquita-flores.webp</image:loc></image:image>
+    <image:image><image:loc>https://pablopalc.github.io/malu-personalizacion/assets/trabajos/rotulo-fachada-taller-beecar-eurotaller.webp</image:loc></image:image>
+    <image:image><image:loc>https://pablopalc.github.io/malu-personalizacion/assets/trabajos/lona-gran-formato-safeland-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://pablopalc.github.io/malu-personalizacion/assets/trabajos/lona-gran-formato-safeland-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://pablopalc.github.io/malu-personalizacion/assets/trabajos/lona-publicitaria-fachada-safeland-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://pablopalc.github.io/malu-personalizacion/assets/trabajos/ropa-laboral-personalizada-llamabe-camiseta.webp</image:loc></image:image>
+    <image:image><image:loc>https://pablopalc.github.io/malu-personalizacion/assets/trabajos/ropa-laboral-personalizada-llamabe-sudadera.webp</image:loc></image:image>
+    <image:image><image:loc>https://pablopalc.github.io/malu-personalizacion/assets/trabajos/ropa-laboral-personalizada-llamabe-pantalon.webp</image:loc></image:image>
+    <image:image><image:loc>https://pablopalc.github.io/malu-personalizacion/assets/trabajos/ropa-laboral-personalizada-llamabe-bermuda.webp</image:loc></image:image>
   </url>
 </urlset>
