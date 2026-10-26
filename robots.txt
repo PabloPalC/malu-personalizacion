@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://maluimpresiones.com/sitemap.xml
+Sitemap: https://www.maluimpresiones.com/sitemap.xml
