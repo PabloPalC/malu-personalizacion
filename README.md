@@ -3,7 +3,8 @@
 Propuesta de web nueva para **Malu** (antes Krea Impresión 3D), Cartagena.
 Impresión 3D, camisetas personalizadas, ropa laboral, regalos publicitarios y rotulación.
 
-**Demo:** https://pablopalc.github.io/malu-personalizacion/
+**Web:** https://maluimpresiones.com (Vercel)  
+**Demo antigua:** https://pablopalc.github.io/malu-personalizacion/
 
 ## Stack
 HTML + CSS + JS vanilla. Sin dependencias. Fuentes Outfit / DM Sans (Google Fonts).
@@ -14,7 +15,7 @@ HTML + CSS + JS vanilla. Sin dependencias. Fuentes Outfit / DM Sans (Google Font
 - [ ] Fotos reales de impresión 3D, camisetas y regalos (siguen de Unsplash)
 - [ ] Horario de apertura (para Google y la ficha de negocio)
 - [ ] Datos del titular en páginas legales: nombre/razón social y NIF (marcados en amarillo)
-- [ ] Dominio definitivo (actualizar canonical, og:url, sitemap, robots)
+- [x] Dominio maluimpresiones.com en Vercel
 
 ## Créditos
 Fotos: [Unsplash](https://unsplash.com) (licencia Unsplash, uso libre).

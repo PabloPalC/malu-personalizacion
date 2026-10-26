@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pablopalc.github.io/malu-personalizacion/sitemap.xml
+Sitemap: https://maluimpresiones.com/sitemap.xml
