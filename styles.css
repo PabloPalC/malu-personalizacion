@@ -103,7 +103,8 @@ p { margin: 0; }
 .eyebrow::before { content: ""; width: 22px; height: 2px; background: currentColor; }
 .hero__title { font-size: clamp(3rem, 7.4vw, 6.4rem); font-weight: 800; margin: 18px 0 22px; letter-spacing: -.045em; line-height: .95; }
 .hero__title em { font-style: normal; color: var(--accent); }
-.hero__lead { font-size: 1.2rem; color: var(--muted); max-width: 34ch; }
+.hero__lead { font-size: 1.2rem; color: var(--muted); max-width: 40ch; }
+.hero__lead strong { color: var(--ink); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 34px 0 40px; }
 .hero__facts { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px 32px; color: var(--muted); font-size: .95rem; }
 .hero__facts strong { color: var(--ink); font-family: var(--display); }
